@@ -2,6 +2,7 @@
 v1 launced
 v2 filter sepia to gray
 v3 drop pos delete
+v4 scrollbar corner white
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
@@ -31,6 +32,11 @@ v3 drop pos delete
 ::-webkit-scrollbar-thumb {
   background: var(--grad2);
 }
+
+::-webkit-scrollbar-corner{
+  background:var(--back);
+}
+
 
 ::selection{
   color:var(--back);
@@ -146,4 +152,11 @@ body{
   left: 0;
   width: calc( (100vw - 640px - 4rem)/2 );
   border-radius: 4px;
+}
+
+
+
+.index{
+  display:flex;
+  flex-direction:column-reverse;
 }
