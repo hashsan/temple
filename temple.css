@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+
+:root{
+  --back:#0D0D0D;
+  --body2:#595454;
+  --word:#BFB9B9;
+
+  --system:#BE8336;
+  --impact:#F2A341;
+
+  --grad:linear-gradient(45deg,var(--impact) 10%,var(--back) 95%);  
+  --grad2:linear-gradient(45deg,var(--back),var(--impact) ,var(--back));
+
+  --border:3px solid var(--system);
+  --border-radius:3px;
+
+}
+
+/**/
+::-webkit-scrollbar {
+  width:6px;
+  height:6px;
+  background-color: var(--back);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--grad2);
+}
+
+::selection{
+  color:var(--back);
+  background:var(--word);
+}
+
+.small{
+  font-size:0.7rem;
+}
+.r{
+  text-align:right;
+}
+.c{
+  text-align:center;
+}
+
+.filter{
+  filter: sepia(0.9) brightness(0.7);  
+}
+
+a{
+  color:var(--impact);
+  margin-right:0.5rem;
+  opacity:0.7;
+  cursor:pointer;
+  text-decoration:unset;
+}
+a:hover{
+  opacity:1;
+}
+a:active{
+  opacity:1;
+  background:var(--body2);
+}
+
+p,h1{
+  margin:0;padding:0;
+}
+
+.title,h1{
+  color:var(--impact);
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/**/
+
+html{
+  scroll-behavior:smooth;
+  font-size:21px;
+  font-family: 'Zen Antique', serif;  
+  line-height:1.15;
+}
+
+body{
+  background:var(--back);  
+  color:var(--system);  
+}
+
+.temple{
+  width:640px;
+  margin:2rem auto;
+}
+
+.temple> * + *{
+  margin-top:0.25rem;
+}
+
+
+
+.frame,[contenteditable]{
+  outline:none;
+  color:var(--word);
+  border:var(--border);
+  border-radius:var(--border-radius);
+  background:var(--body);
+  padding:0.5rem 1rem;
+  word-break:break-all;
+}
+
+/**/
+.editor{
+  position:relative;
+}
+.editor:after{
+  content:attr(data-crc);
+  text-align:right;
+  color:var(--system);
+  margin-right:-0.75rem;
+  margin-bottom:-0.5rem;
+  display:block;
+}
+
+.drop {
+  position: fixed;
+  top: 0.25rem;
+  right: 0;
+  width: calc( (100vw - 640px - 4rem)/2 );
+  border-radius: 4px;
+}
+
+.img{
+  position: fixed;
+  top: 0.25rem;
+  left: 0;
+  width: calc( (100vw - 640px - 4rem)/2 );
+  border-radius: 4px;
+}
