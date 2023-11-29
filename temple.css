@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+/*
+v1 launced
+v2 filter sepia to gray
+v3 drop pos delete
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
 
 :root{
   --back:#0D0D0D;
@@ -42,9 +47,14 @@
   text-align:center;
 }
 
-.filter{
-  filter: sepia(0.9) brightness(0.7);  
+.filter {
+    filter: grayscale(0.9) brightness(0.9);
 }
+/*
+.filter{
+  filter: sepia(0.9) brightness(0.7);    
+}
+*/
 
 a{
   color:var(--impact);
@@ -120,6 +130,7 @@ body{
   display:block;
 }
 
+/*
 .drop {
   position: fixed;
   top: 0.25rem;
@@ -127,6 +138,7 @@ body{
   width: calc( (100vw - 640px - 4rem)/2 );
   border-radius: 4px;
 }
+*/
 
 .img{
   position: fixed;
