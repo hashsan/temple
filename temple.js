@@ -43,10 +43,10 @@ export default class Temple{
     fn.q('.btnindex').onclick=()=>{
       fn.getIndexInfo(this.saveurl,getGhp())
        .then(ary=>{
-          console.log('in then')        
+          //console.log('in then')        
         var html = ary.filter(d=>isText(d.path)).map(d=>{
-          console.log('in')
-        //{sha,date,message,path,order}
+          //console.log('in')
+          //{sha,date,message,path,order}
          return `<a href="index.html?file=${d.path}"
          style="order:${d.order}">${d.date} | ${d.message} | ${d.path}</a>`
         }).join('\n')
