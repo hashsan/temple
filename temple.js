@@ -1,7 +1,12 @@
+/*
+v1 coded
+v2 initIndex remake
+v3 index clear
+*/
+
 import "//hashsan.github.io/use/use.js?v=43"
 import "https://hashsan.github.io/drop/drop.js"
 import "https://hashsan.github.io/drop/upimage.js"
-
 
 
 export default class Temple{
@@ -38,9 +43,8 @@ initIndex(){
   this.saveurl = "https://hashsan.github.io/ctrl_s/index.html"
   this.index = fn.q(q)
   //console.log(this.index)
-  this.index = ''
   fn.q('.btnindex').onclick=()=>{
-
+    this.index = '' //clear
     fn.renderIndex(this.saveurl,(d)=>{
 
       if(!/\.txt/.test(d.path)){
