@@ -92,7 +92,7 @@ initIndex(){
     ;
     function getGhp(){
       var d = "ghp_"
-      /**/
+      //
       + "9ah8c3yojjO"
       + "EsWBOP6CSiMAMj"
       + "mcDcF1UGrhv"    
