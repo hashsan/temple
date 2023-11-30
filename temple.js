@@ -33,6 +33,40 @@ export default class Temple{
     this.initIndex()
 
   }
+initIndex(){
+  const q="footer .index"
+  this.saveurl = "https://hashsan.github.io/ctrl_s/index.html"
+  this.index = fn.q(q)
+  //console.log(this.index)
+  this.index = ''
+  fn.q('.btnindex').onclick=()=>{
+
+    fn.renderIndex(this.saveurl,(d)=>{
+
+      if(!/\.txt/.test(d.path)){
+        return
+      }
+
+      const title = d.message.split(/\s/).at(0)
+      const date = d.date.split('T').at(0).replace(/-/g,'/')
+      const link = 'index.html?file='+d.path
+      var el = document.createElement('div')
+      el.innerHTML=`
+    <a href="${link}" style="order:${d.order}">
+     ${title}
+     <span class="small">${d.path} ${date}</span>
+    </a>
+    `
+      el = el.children[0]
+      fn.q(q).append(el)
+
+    }) 
+  }
+
+}
+
+  
+/*  
   initIndex(){
     const q="footer .index"
     this.saveurl = "https://hashsan.github.io/ctrl_s/index.html"
@@ -66,6 +100,8 @@ export default class Temple{
     }
 
   }
+*/
+  
   initImg(){
     const q ="article .img"
     this.img = fn.q(q)
