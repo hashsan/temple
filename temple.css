@@ -3,6 +3,7 @@ v1 launced
 v2 filter sepia to gray
 v3 drop pos delete
 v4 scrollbar corner white
+v5 grad tail lost repair
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
@@ -15,7 +16,11 @@ v4 scrollbar corner white
   --system:#BE8336;
   --impact:#F2A341;
 
-  --grad:linear-gradient(45deg,var(--impact) 10%,var(--back) 95%);  
+  /*v5*/
+  --system2:#73561D;
+  --grad:linear-gradient(45deg,var(--system2),var(--impact) 10%,var(--system2));
+
+  /*--grad:linear-gradient(45deg,var(--impact) 10%,var(--back) 95%);*/
   --grad2:linear-gradient(45deg,var(--back),var(--impact) ,var(--back));
 
   --border:3px solid var(--system);
