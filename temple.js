@@ -44,7 +44,7 @@ initIndex(){
   this.index = fn.q(q)
   //console.log(this.index)
   fn.q('.btnindex').onclick=()=>{
-    this.index = '' //clear
+    this.index.innerHTML= '' //clear
     fn.renderIndex(this.saveurl,(d)=>{
 
       if(!/\.txt/.test(d.path)){
