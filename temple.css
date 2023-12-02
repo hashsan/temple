@@ -67,6 +67,7 @@ v5 grad tail lost repair
 }
 */
 
+
 a{
   color:var(--impact);
   margin-right:0.5rem;
@@ -116,6 +117,12 @@ body{
   margin-top:0.25rem;
 }
 
+.m-right{
+  margin-right:0.5rem;
+}
+.m-top{
+  margin-top:0.25rem;  
+}
 
 
 .frame,[contenteditable]{
