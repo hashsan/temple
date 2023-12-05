@@ -4,6 +4,7 @@ v2 filter sepia to gray
 v3 drop pos delete
 v4 scrollbar corner white
 v5 grad tail lost repair
+v6 for templer.js
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
@@ -172,3 +173,14 @@ body{
   display:flex;
   flex-direction:column-reverse;
 }
+
+/*v6*/
+.pre{
+  word-break:break-all;
+}
+h2{
+  font-size:1rem;
+  padding:0;margin:0;
+}
+
+
