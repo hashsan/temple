@@ -2,6 +2,7 @@
 v1 coded
 v2 initIndex remake
 v3 index clear
+v4 delete old
 */
 
 import "//hashsan.github.io/use/use.js?v=43"
@@ -70,41 +71,7 @@ initIndex(){
 }
 
   
-/*  
-  initIndex(){
-    const q="footer .index"
-    this.saveurl = "https://hashsan.github.io/ctrl_s/index.html"
-    this.index = fn.q(q)
-    const isText=(file)=>{
-       return /\.txt/.test(file)
-    }
-    fn.q('.btnindex').onclick=()=>{
-      fn.getIndexInfo(this.saveurl,getGhp())
-       .then(ary=>{
-          //console.log('in then')        
-        var html = ary.filter(d=>isText(d.path)).map(d=>{
-          //console.log('in')
-          //{sha,date,message,path,order}
-         return `<a href="index.html?file=${d.path}"
-         style="order:${d.order}">${d.date} | ${d.message} | ${d.path}</a>`
-        }).join('\n')
-        ;
-        this.index.innerHTML= html
-      })
-    }
-
-    ;
-    function getGhp(){
-      var d = "ghp_"
-      //
-      + "9ah8c3yojjO"
-      + "EsWBOP6CSiMAMj"
-      + "mcDcF1UGrhv"    
-      return d;
-    }
-
-  }
-*/
+/*v4*/
   
   initImg(){
     const q ="article .img"
@@ -171,8 +138,16 @@ initIndex(){
     this.setTitles()
     this.setImage()
     this.setCRC()
+    this.setLink()
   }
 
+  async setLink(){
+    var a = this.textinfo.link;
+    if(!a){
+      return
+    }
+    fn.q('.nextlink').href = a;
+  }
   async setTitles(){
     var ary=this.textinfo.titles.map(d=>'<a>'+d+'</a>')
     fn.q('.title').innerHTML = this.textinfo.title
